@@ -4,6 +4,14 @@
   margin: 8rem auto;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   min-height: 50rem; }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
+  @media only screen and (max-width: 420px) {
+    .container {
+      width: 100%; } }
 
 .header {
   height: 7rem;
@@ -14,9 +22,30 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 2rem; }
+  @media only screen and (max-width: 450px) {
+    .header {
+      flex-wrap: wrap;
+      height: 11rem;
+      align-content: space-around; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 900px) {
+    .content {
+      flex-direction: column; } }
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.5rem;
+  background-color: var(--grey-light-2);
+  border-bottom: 1px solid var(--grey-light-3); }
+  @media only screen and (max-width: 900px) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 650px) {
+    .detail {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--grey-dark-1);
@@ -69,6 +98,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 1100px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-size: 1.5rem;
@@ -90,6 +122,10 @@ body {
   justify-content: center;
   align-items: center;
   flex: 0 0 40%; }
+  @media only screen and (max-width: 450px) {
+    .search {
+      order: 1;
+      flex: 0 0 100%; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -178,12 +214,28 @@ body {
     height: 1.75rem;
     margin-right: 2rem;
     fill: var(--grey-light-1); }
+    @media only screen and (max-width: 650px) {
+      .side-nav__icon {
+        margin-right: 1rem; } }
+  @media only screen and (max-width: 900px) {
+    .side-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto; } }
+  @media only screen and (max-width: 650px) {
+    .side-nav {
+      font-size: 1.2rem;
+      width: 100%; } }
 
 .legal {
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
   color: var(--grey-light-4); }
+  @media only screen and (max-width: 900px) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -201,6 +253,14 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 1.7rem 3rem; }
+    @media only screen and (max-width: 650px) {
+      .overview__heading {
+        font-size: 1.7rem;
+        padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 450px) {
+      .overview__heading {
+        font-size: 1.2rem;
+        letter-spacing: none; } }
   .overview__stars {
     margin-right: auto; }
   .overview__icon-star {
@@ -212,6 +272,10 @@ body {
     display: flex;
     align-items: center;
     margin-right: 1.5rem; }
+    @media only screen and (max-width: 450px) {
+      .overview__location {
+        font-size: 1rem;
+        margin-right: 0.5rem; } }
   .overview__rating {
     display: flex;
     flex-direction: column;
@@ -221,14 +285,25 @@ body {
     height: 6rem;
     align-self: stretch;
     padding: 0 2.25rem; }
+    @media only screen and (max-width: 450px) {
+      .overview__rating {
+        height: 4rem;
+        padding: 1rem; } }
   .overview__rating-average {
     font-size: 2.2rem;
     font-weight: 300;
     color: white; }
+    @media only screen and (max-width: 450px) {
+      .overview__rating-average {
+        font-size: 1.6rem; } }
   .overview__rating-count {
     color: white;
     margin-top: 3px;
     font-size: 1rem; }
+    @media only screen and (max-width: 450px) {
+      .overview__rating-count {
+        font-size: 1rem;
+        margin-top: 1px; } }
 
 .btn-inline {
   border: none;
@@ -257,13 +332,6 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
-.detail {
-  display: flex;
-  justify-content: space-between;
-  padding: 4.5rem;
-  background-color: var(--grey-light-2);
-  border-bottom: 1px solid var(--grey-light-3); }
-
 .description {
   font-size: 1.4rem;
   flex: 0 0 60%;
@@ -271,12 +339,21 @@ body {
   background-color: white;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
   padding: 3rem; }
+  @media only screen and (max-width: 900px) {
+    .description {
+      padding: 2rem;
+      margin-right: 2rem;
+      width: 100%; } }
 
 .user-reviews {
   flex: 1;
   display: flex;
   flex-direction: column;
   background-color: var(--grey-light-2); }
+  @media only screen and (max-width: 650px) {
+    .user-reviews {
+      margin-top: 2rem;
+      width: 100%; } }
 
 .review {
   display: flex;
@@ -287,12 +364,20 @@ body {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 900px) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 2.5rem; } }
   .review__info {
     display: flex;
     flex-direction: row;
     padding-left: 3rem;
     align-items: center;
     padding-bottom: 3rem; }
+    @media only screen and (max-width: 900px) {
+      .review__info {
+        padding-left: 1.5rem;
+        padding-bottom: 1.5rem; } }
   .review__image {
     width: 4rem;
     height: 4rem;
@@ -300,6 +385,9 @@ body {
   .review__paragraph {
     padding: 3rem;
     z-index: 100; }
+    @media only screen and (max-width: 900px) {
+      .review__paragraph {
+        padding: 1.5rem; } }
   .review__name {
     margin-left: 1rem;
     margin-right: 1rem; }
@@ -346,6 +434,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 650px) {
+    .recommend {
+      justify-content: flex-start; } }
+  @media only screen and (max-width: 650px) {
+    .recommend__friends {
+      margin-left: 2rem; } }
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -353,7 +447,7 @@ body {
     border-radius: 50%;
     border: 2px solid white; }
   .recommend__photo:not(:first-of-type) {
-    margin-left: -1.2rem; }
+    margin-left: -2rem; }
 
 .button {
   max-width: 30%;
